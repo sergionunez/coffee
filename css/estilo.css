@@ -1,0 +1,412 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+/*     text-align:left; */
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+html,body{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header{
+  position: relative;
+  background: url('../images/back1.jpg') no-repeat center;
+  background-size: cover;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  /*justify-content: center;*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .brand {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 10%;
+}
+
+header .brand img {
+  width: 100%;
+}
+
+header .logo{
+  height: 40%;
+  margin: auto;
+}
+
+header .boton-menu{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav{
+/*   display: none; */
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(255,255,255,0.8);
+  height: 100%;
+  width: 300px;
+  padding: 100px 30px;
+}
+
+nav .links {
+  list-style: none;
+}
+
+nav .links li{
+  margin: 10px auto;
+}
+
+nav .links li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #555;
+}
+
+nav .links li a:hover{
+  text-decoration: underline;
+
+}
+
+nav .social{
+  margin-top: 40px;
+}
+
+nav .social a{
+  color: #888;
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+nav .social a:hover{
+  color: #392202;
+}
+
+nav .boton {
+  display: block;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #392202;
+  color: #fff;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 10px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid #392202;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+nav .boton:hover {
+  background: #fff;
+  border: 2px solid #392202;
+  color: #392202;
+}
+
+.shop {
+  position: relative;
+  height: 100%;
+}
+
+.shop .info{
+  position: absolute;
+  bottom: 50px;
+}
+
+.shop .info>span,
+.menu>span,
+.feedback>span,
+.fotos>span{
+  font-size: 40px;
+}
+
+.shop .info>h2,
+.menu>h2,
+.feedback>h2,
+.fotos>h2{
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px auto 20px auto;
+}
+
+.shop .info .row div {
+  padding: 10px;
+}
+
+.shop .info .row img {
+  width: 50%;
+  -webkit-filter: sepia(80%) saturate(150%) brightness(85%);
+          filter: sepia(80%) saturate(150%) brightness(85%);
+}
+
+.shop .info .row div h2{
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.shop .info .row div p{
+  padding: 5px 15px;
+}
+
+.banner {
+  position: relative;
+  background: url('../images/banner.jpg') no-repeat center;
+  background-size: cover;
+  height: 60%;
+}
+
+.menu {
+  position: relative;
+  min-height: height: ;120%;
+  padding: 10% 5%;
+}
+
+.menu .row .col-centered{
+  padding: 20px;
+}
+
+.menu .media{
+  padding: 10px;
+  background: #bdd8d9;
+}
+
+.menu .media .media-left img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.menu .media .media-body h4{
+  text-transform: capitalize;
+  font-style: oblique;
+}
+
+.menu .media .media-body p{
+  color: #555;
+}
+
+.menu .media .media-right p{
+  color: #000;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.feedback {
+  padding: 100px 0;
+  background: #eee;
+  position: relative;
+}
+
+.feedback .opinion{
+  text-align: center;
+  color: #a55;
+  font-weight: bold;
+}
+
+.feedback .autor{
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.fotos{
+  padding: 100px 0;
+}
+
+.fotos .col-centered{
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.fotos .col-centered .image{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.fotos .col-centered .image img{
+  width: 100%;
+}
+
+.fotos .col-centered:hover .info{
+  opacity: 1;
+}
+
+.fotos .col-centered .info{
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  background: rgba(200,80,0,0.4);
+  position: absolute;
+  top: 0;
+  
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  
+  transition: all 1s ease;
+  opacity: 0;
+    
+}
+
+.fotos .col-centered .info a span{
+  color: #fff;
+  font-size: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 5px;
+  transition-duration: 1s;
+}
+
+.fotos .col-centered .info span:hover{
+  background: #fff;
+  font-size: 30px;
+  color: #d20;
+}
+
+footer{
+  position: relative;
+  background: #333;
+  height: 40%;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .brand{
+  width: 200px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+footer .social{
+  margin: auto;
+}
+
+footer .social a{
+  padding: 10px;
+  background: #000;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 5px;
+}
+
+footer .social a:hover{
+  background: #392202;
+}
+
+footer .company{
+  position: absolute;
+  right: 50px;
+  color: #888;
+  top: 40%;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 800px){
+  nav{
+    width: 50%;
+  }
+  
+  .shop{
+    height: auto;
+    padding: 40px 30px;
+  }
+  
+  .shop .info{
+    position: static;
+  }
+  
+  .banner{
+    height: 40%;
+    background-positio: right;
+  }
+  
+  .menu .media .media-left img{
+    width: 80px;
+    height: 80px;
+  }
+  
+  .feedback{
+    padding: 40px 10px;
+  }
+  
+  .fotos .col-centered{
+    height: 200px;
+  }
+  
+  .footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .brand{
+   width: 100px;
+    position: static;
+    margin: auto;
+  }
+  
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape){
+  nav{
+    padding: 30px 20px;
+    width: 30%;
+  }
+  
+  
+  .banner{
+    height: 50%;
+  }
+  
+  .fotos .col-centered{
+    height: 300px;
+  }
+}
